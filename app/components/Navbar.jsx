@@ -26,7 +26,7 @@ const navLinks = [
 const Navbar = () => {
 
     const [open, setOpen] = useState(false) // State for Mobile Menu
-    const [isScrolled, setIsScrolled] = useState(false); // State for Mouse Scroll
+    // const [isScrolled, setIsScrolled] = useState(false); // State for Mouse Scroll
 
     // Handle Mobile Menu
     const handleMenu =() =>{
@@ -35,16 +35,17 @@ const Navbar = () => {
     }
 
     // Handle Scroll with useEffect Hook
-    useEffect(() => {
-        const handleScroll = () => setIsScrolled(window.scrollY > 0);
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []); // Empty dependency array ensures the effect runs only once on mount
+    // useEffect(() => {
+    //     const handleScroll = () => setIsScrolled(window.scrollY > 0);
+    //     window.addEventListener('scroll', handleScroll);
+    //     return () => window.removeEventListener('scroll', handleScroll);
+    // }, []); // Empty dependency array ensures the effect runs only once on mount
 
     return (
         <div
-            className={`md:bg-transparent sm:bg-gray-800 w-full fixed top-0 left-0 z-10 shadow-md transition-all duration-300 
-            ${isScrolled ? 'md:bg-red-950' : ''}`}
+            // className={`md:bg-transparent sm:bg-gray-800 w-full fixed top-0 left-0 z-10 shadow-md transition-all duration-300
+            // ${isScrolled ? 'md:bg-[#450a0a]' : ''}`}
+            className={`md:bg-[#450a0a] sm:bg-gray-800 w-full fixed top-0 left-0 z-10 shadow-md transition-all duration-300`}
         >
             <div className="mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
