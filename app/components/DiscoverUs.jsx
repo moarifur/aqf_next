@@ -1,5 +1,3 @@
-import myVideo from '/public/videos/myVideo.mp4';
-
 const DiscoverUs = () => {
     return (
         <div className='bg-gradient-to-r from-[#3e2334] via-[#0f1225] to-[#2c2c2c] h-auto'>
